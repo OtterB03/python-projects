@@ -23,19 +23,16 @@ def guessnum():
     
             print(f"Next try. {trys_counter} remaning")
             
-                
-
             continue #If "Invalid Character appears, game will continue until trys_counter will be 0"
 
         if user_input == 5:
             print("Correct!")
             print("Thanks for playing")
-        elif user_input <= 3 or user_input >= 7:
+        elif user_input >0 and user_input <=3 or user_input >7 and user_input <=10:
+            print("Cold!")
             if trys_counter == 1:
                 print("Thanks for playing")
                 break
-
-            print("Cold!")
 
             trys_counter -= 1
             if trys_counter == 1:
@@ -43,11 +40,22 @@ def guessnum():
     
             print(f"Next try. {trys_counter} remaning")
         elif user_input == 4 or user_input == 6:
+            print("warm!")
             if trys_counter == 1:
                 print("Thanks for playing")
                 break
 
-            print("warm!")
+            trys_counter -= 1
+            if trys_counter == 1:
+                print("Last chance")
+    
+            print(f"Next try. {trys_counter} remaning")
+
+        elif user_input <1 or user_input >10:
+            print("Invalid number. Out of range error")
+            if trys_counter == 1:
+                print("Thanks for playing")
+                break
 
             trys_counter -= 1
             if trys_counter == 1:

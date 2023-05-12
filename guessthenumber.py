@@ -3,7 +3,7 @@
 def guessnum():
     explaning = f"Find the correct number between 1 and 10. You have 5 trys."
     print(explaning)
-    correct_num = 5
+    correct_num = range(1, 20.000) #Random number = Frecuences(tones)
     user_input = 0
     trys_counter = 5
     while user_input != correct_num:
@@ -25,10 +25,10 @@ def guessnum():
             
             continue #If "Invalid Character appears, game will continue until trys_counter will be 0"
 
-        if user_input == 5:
+        if user_input == 440:
             print("Correct!")
             print("Thanks for playing")
-        elif user_input >0 and user_input <=3 or user_input >7 and user_input <=10:
+        elif user_input = math.floor(user_input) and user_input <=3 or user_input >7 and user_input <=10:
             print("Cold!")
             if trys_counter == 1:
                 print("Thanks for playing")
